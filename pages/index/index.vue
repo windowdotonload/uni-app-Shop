@@ -55,6 +55,7 @@ export default {
   },
   onLoad() {
     this.getSwipers();
+    this.getGoodsList();
   },
   methods: {
     async getSwipers() {
@@ -66,6 +67,10 @@ export default {
       } catch (err) {
         uni.showToast(err);
       }
+    },
+    async getGoodsList() {
+      let res = await myRequest("goods/search");
+      console.log(res);
     },
   },
 };
@@ -89,35 +94,36 @@ export default {
 }
 .wrap {
   display: flex;
-  width: 80px;
+  width: 60px;
   justify-content: center;
   flex-wrap: wrap;
   p {
+    font-size: 12px;
     margin-top: 10px;
   }
 }
 .navigation {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(255, 234, 167, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   image {
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 60%;
   }
 }
 .recommend {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
   margin-top: 15px;
   background: rgba(116, 185, 255, 0.6);
   border-radius: 10px;
   text-align: center;
-  font-size: 26px;
+  font-size: 20px;
   color: rgba(99, 110, 114, 1);
   letter-spacing: 1em;
 }

@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/shopcar/shopcar",
+    "pages/user/user"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app shop",
+    "navigationBarBackgroundColor": "#dfe6e9",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/shouye.png",
+        "selectedIconPath": "static/shouyeac.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "static/zixun.png",
+        "selectedIconPath": "static/zixunac.png"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车",
+        "iconPath": "static/gouwuche.png",
+        "selectedIconPath": "static/gouwucheac.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "static/yonghu.png",
+        "selectedIconPath": "static/yonghuac.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

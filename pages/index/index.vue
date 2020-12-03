@@ -14,32 +14,36 @@
     <!-- 导航 -->
     <view class="nav">
       <div class="wrap">
-        <div class="navigation">
-          <image src="../../static/chaoshi1.svg"></image>
+        <div class="navigation" style="background: rgba(85, 239, 196, 0.6)">
+          <image src="../../static/cat.svg"></image>
         </div>
-        <p>优选商城</p>
+        <p>商品分类</p>
       </div>
       <div class="wrap">
         <div class="navigation">
-          <image src="../../static/lianxisvg.svg"></image>
+          <image src="../../static/paimai1.svg"></image>
         </div>
-        <p>联系我们</p>
+        <p>秒杀拍</p>
       </div>
       <div class="wrap">
-        <div class="navigation">
-          <image src="../../static/tupiansvg.svg"></image>
+        <div class="navigation" style="background: rgba(129, 236, 236, 0.6)">
+          <image src="../../static/market.svg"></image>
         </div>
-        <p>精选图片</p>
+        <p>超市购</p>
       </div>
       <div class="wrap">
-        <div class="navigation">
-          <image src="../../static/shipin1.svg"></image>
+        <div class="navigation" style="background: rgba(116, 185, 255, 0.6)">
+          <image src="../../static/muying.svg"></image>
         </div>
-        <p>共享视频</p>
+        <p>母婴品</p>
       </div>
     </view>
     <view class="recommend">
       <p>推荐商品</p>
+    </view>
+    <!-- 楼层 -->
+    <view class="floorContiner" v-for="(item, i) in floorList" :key="i">
+      <image :src="item.floor_title.image_src" mode="widthFix"></image>
     </view>
   </view>
 </template>
@@ -54,13 +58,14 @@ export default {
   data() {
     return {
       swiperData: [],
+      floorList: [],
       current: 0,
       mode: "round",
     };
   },
   onLoad() {
     this.getSwipers();
-    this.getGoodsList();
+    this.getFloor();
   },
   methods: {
     async getSwipers() {
@@ -68,14 +73,21 @@ export default {
         let res = await myRequest("/home/swiperdata", "GET", { msg: "123" });
         // console.log(res);
         this.swiperData = res.data.message;
-        console.log("swiperdata", this.swiperData);
+        // console.log("swiperdata", this.swiperData);
       } catch (err) {
         uni.showToast(err);
       }
     },
-    async getGoodsList() {
-      let res = await myRequest("goods/search");
-      console.log(res);
+
+    async getFloor() {
+      try {
+        let res = await myRequest("/home/floordata");
+        // console.log("floor", res);
+        this.floorList = res.data.message;
+        console.log(this.floorList);
+      } catch (err) {
+        uni.showToast(err);
+      }
     },
   },
 };

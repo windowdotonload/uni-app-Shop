@@ -5,6 +5,7 @@
 -->
 <template>
   <view class="home">
+    <mysearch></mysearch>
     <swiper indicator-dots>
       <swiper-item v-for="item in swiperData" :key="item.goods_id">
         <image :src="item.image_src"></image>
@@ -45,7 +46,11 @@
 
 <script>
 import { myRequest } from "util/api";
+import mysearch from "components/searchinput";
 export default {
+  components: {
+    mysearch,
+  },
   data() {
     return {
       swiperData: [],

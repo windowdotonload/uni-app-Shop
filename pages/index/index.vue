@@ -43,7 +43,21 @@
     </view>
     <!-- 楼层 -->
     <view class="floorContiner" v-for="(item, i) in floorList" :key="i">
-      <image :src="item.floor_title.image_src" mode="widthFix"></image>
+      <view>
+        <image :src="item.floor_title.image_src" mode="widthFix"></image>
+      </view>
+      <view class="showCard">
+        <navigator
+          class="imgContiner"
+          v-for="(item1, i1) in item.product_list"
+          :key="i1"
+        >
+          <image
+            :src="item1.image_src"
+            :mode="i1 == 0 ? 'widthFix' : 'scaleToFill'"
+          ></image>
+        </navigator>
+      </view>
     </view>
   </view>
 </template>
@@ -93,7 +107,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 .home {
   swiper {
     width: 750rpx;
@@ -143,5 +157,28 @@ export default {
   font-size: 20px;
   color: rgba(99, 110, 114, 1);
   letter-spacing: 1em;
+}
+.floorContiner {
+  margin-top: 20px;
+  width: 100%;
+}
+.showCard {
+  overflow: hidden;
+  width: 100%;
+}
+.imgContiner {
+  box-sizing: border-box;
+  padding: 3px;
+  width: 33.33%;
+  float: left;
+  &:nth-last-child(-n + 4) {
+    height: 33.33vw * 386 / 232 /2;
+  }
+
+  image {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

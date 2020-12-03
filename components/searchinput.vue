@@ -31,7 +31,6 @@ export default {};
   padding: 0;
   width: 90%;
   height: 20px;
-  padding-left: 43%;
   text-align: center;
   color: #b2bec3;
   line-height: 20px;

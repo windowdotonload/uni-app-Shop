@@ -45,7 +45,15 @@
             "path" : "pages/goodsdetail/goodsdetail",
             "style" :                                                                                    
             {
-                "enablePullDownRefresh": true
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/goodsdescription/goodsdescription",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
             }
             
         }

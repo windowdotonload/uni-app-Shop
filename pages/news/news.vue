@@ -26,7 +26,7 @@
               v-for="(item1, i1) in item.children"
               :key="i1"
               class="pic"
-              @click="godetail"
+              @click="godetail(item.cat_id)"
             >
               <image :src="item1.cat_icon"></image>
               <p>{{ item1.cat_name }}</p>
@@ -75,10 +75,10 @@ export default {
       this.scrollTop = 0;
       console.log(this.rightContent);
     },
-    godetail() {
+    godetail(catid) {
       console.log("ok");
       uni.navigateTo({
-        url: "/pages/goodsdetail/goodsdetail?id=10",
+        url: `/pages/goodsdetail/goodsdetail?id=${catid}`,
       });
     },
   },

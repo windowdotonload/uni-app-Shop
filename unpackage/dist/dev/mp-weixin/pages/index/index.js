@@ -221,7 +221,7 @@ var _api = __webpack_require__(/*! util/api */ 20);function _interopRequireDefau
   methods: {
     getSwipers: function getSwipers() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.prev = 0;_context.next = 3;return (
 
-                  (0, _api.myRequest)("/home/swiperdata", "GET", { msg: "123" }));case 3:res = _context.sent;
+                  (0, _api.myRequest)("/home/swiperdata"));case 3:res = _context.sent;
                 // console.log(res);
                 _this.swiperData = res.data.message;
                 // console.log("swiperdata", this.swiperData);
@@ -235,9 +235,9 @@ var _api = __webpack_require__(/*! util/api */ 20);function _interopRequireDefau
                   (0, _api.myRequest)("/home/floordata"));case 3:res = _context2.sent;
                 // console.log("floor", res);
                 _this2.floorList = res.data.message;
-                console.log(_this2.floorList);_context2.next = 11;break;case 8:_context2.prev = 8;_context2.t0 = _context2["catch"](0);
-
-                uni.showToast(_context2.t0);case 11:case "end":return _context2.stop();}}}, _callee2, null, [[0, 8]]);}))();
+                // console.log(this.floorList);
+                _context2.next = 10;break;case 7:_context2.prev = 7;_context2.t0 = _context2["catch"](0);
+                uni.showToast(_context2.t0);case 10:case "end":return _context2.stop();}}}, _callee2, null, [[0, 7]]);}))();
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

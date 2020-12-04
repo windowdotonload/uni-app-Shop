@@ -84,7 +84,7 @@ export default {
   methods: {
     async getSwipers() {
       try {
-        let res = await myRequest("/home/swiperdata", "GET", { msg: "123" });
+        let res = await myRequest("/home/swiperdata");
         // console.log(res);
         this.swiperData = res.data.message;
         // console.log("swiperdata", this.swiperData);
@@ -98,7 +98,7 @@ export default {
         let res = await myRequest("/home/floordata");
         // console.log("floor", res);
         this.floorList = res.data.message;
-        console.log(this.floorList);
+        // console.log(this.floorList);
       } catch (err) {
         uni.showToast(err);
       }

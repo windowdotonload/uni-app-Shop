@@ -41,6 +41,14 @@
             }
             
         }
+        ,{
+            "path" : "pages/goodsdetail/goodsdetail",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": true
+            }
+            
+        }
     ],
 	"tabBar":{
 		"selectedColor":"black",
@@ -53,7 +61,7 @@
 			},
 			{
 			"pagePath":"pages/news/news",	
-			"text":"资讯",
+			"text":"分类",
 			"iconPath":"static/zixun.png",
 			"selectedIconPath":"static/zixunac.png"
 			},

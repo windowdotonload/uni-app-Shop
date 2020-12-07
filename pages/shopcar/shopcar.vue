@@ -1,22 +1,24 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: windowdotonload
+-->
 <template>
-	<view>
-		<h1>shopcar</h1>
-	</view>
+  <view> </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
-		}
-	}
+export default {
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.addressBtn {
+  width: 80%;
+  margin-top: 10px;
+}
 </style>

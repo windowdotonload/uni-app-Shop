@@ -65,7 +65,7 @@
         </view>
         <p class="bottomText">分享</p>
       </span>
-      <span class="bottomItem">
+      <span class="bottomItem" @click="switchToCart">
         <view class="iconContiner">
           <image src="../../static/shopcar.svg"></image>
         </view>
@@ -122,8 +122,25 @@ export default {
     async addGoods() {
       console.log(this.goodsInfo);
       let cartArr = uni.getStorageSync("CART_DATA") || [];
-      console.log("CARTARR", cartArr);
-      uni.setStorageSync("storage_key", "hello");
+      let index = cartArr.findIndex(
+        (item) => item.goods_id == this.goodsInfo.goods_id
+      );
+      if (index == -1) {
+        this.goodsInfo.num = 1;
+        cartArr.push(this.goodsInfo);
+      } else {
+        cartArr[index].num++;
+      }
+      uni.setStorageSync("CART_DATA", cartArr);
+      uni.showToast({
+        title: "添加商品成功",
+        mask: true,
+      });
+    },
+    switchToCart() {
+      uni.switchTab({
+        url: "/pages/shopcar/shopcar",
+      });
     },
   },
 };

@@ -71,7 +71,12 @@
         </view>
         <p class="bottomText">购物车</p>
       </span>
-      <span class="menuBottom" size="mini" style="background: #e67e22">
+      <span
+        class="menuBottom"
+        size="mini"
+        style="background: #e67e22"
+        @click="addGoods"
+      >
         加入购物车
       </span>
       <span class="menuBottom" size="mini" style="background: #e74c3c">
@@ -113,6 +118,12 @@ export default {
         current: cur.pics_big,
         urls: arr,
       });
+    },
+    async addGoods() {
+      console.log(this.goodsInfo);
+      let cartArr = uni.getStorageSync("CART_DATA") || [];
+      console.log("CARTARR", cartArr);
+      uni.setStorageSync("storage_key", "hello");
     },
   },
 };

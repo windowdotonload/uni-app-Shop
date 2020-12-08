@@ -127,6 +127,7 @@ export default {
       );
       if (index == -1) {
         this.goodsInfo.num = 1;
+        this.goodsInfo.checked = true;
         cartArr.push(this.goodsInfo);
       } else {
         cartArr[index].num++;

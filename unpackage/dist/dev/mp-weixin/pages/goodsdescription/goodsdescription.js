@@ -259,6 +259,7 @@ var _api = __webpack_require__(/*! util/api */ 20);function _interopRequireDefau
 
                 if (index == -1) {
                   _this2.goodsInfo.num = 1;
+                  _this2.goodsInfo.checked = true;
                   cartArr.push(_this2.goodsInfo);
                 } else {
                   cartArr[index].num++;

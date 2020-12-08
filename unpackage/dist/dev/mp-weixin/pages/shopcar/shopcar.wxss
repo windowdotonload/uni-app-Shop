@@ -24,8 +24,107 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.addressBtn.data-v-ca870978 {
-  width: 80%;
-  margin-top: 10px;
+.text.data-v-ca870978 {
+  padding: 5px 10px;
+  font-size: 15px;
+  color: #dfe4ea;
+}
+.numberbox.data-v-ca870978 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+._ul.data-v-ca870978 {
+  padding: 0;
+  margin: 0;
+}
+._li.data-v-ca870978 {
+  height: 120px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  border-top: 1px solid #dfeae6;
+  list-style: none;
+}
+.listGoodsItem.data-v-ca870978 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.listGoodsItem image.data-v-ca870978 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.listGoodsItem .desContent.data-v-ca870978 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 110px;
+  float: left;
+}
+.listGoodsItem .desContent .price.data-v-ca870978 {
+  color: #d63031;
+}
+.bottomAccount.data-v-ca870978 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  background: #daeeee;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  bottom: 50px;
+}
+.right.data-v-ca870978 {
+  overflow: hidden;
+}
+.price.data-v-ca870978 {
+  float: right;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+.price .priceText.data-v-ca870978 {
+  width: 100px;
+  text-align: right;
+}
+.count.data-v-ca870978 {
+  float: right;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #ec6464;
 }
 

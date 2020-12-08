@@ -190,6 +190,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -215,6 +224,18 @@ var _default =
         }
       });
       return price;
+    },
+    totalNum: function totalNum() {
+      var num = 0;
+      Number;
+      this.goodsData.
+      filter(function (item) {
+        return item.checked == true;
+      }).
+      forEach(function (item) {
+        num = Number(item.num) + Number(num);
+      });
+      return num;
     } },
 
   onShow: function onShow() {
@@ -238,14 +259,49 @@ var _default =
       uni.setStorageSync("CART_DATA", this.goodsData);
     },
     changeNum: function changeNum(item, $event) {
-      console.log(arguments);
+      // console.log(arguments);
       console.log($event);
-    },
-    changeAllSel: function changeAllSel() {
-      this.goodsData.forEach(function (item) {
-        item.checked = true;
+      this.goodsData.some(function (i) {
+        if (i.goods_id == item.goods_id) {
+          i.num = $event;
+        }
       });
       uni.setStorageSync("CART_DATA", this.goodsData);
+    },
+    changeAllSel: function changeAllSel() {
+      if (this.allChecked == true) {
+        this.goodsData.forEach(function (item) {
+          item.checked = false;
+        });
+      } else {
+        this.goodsData.forEach(function (item) {
+          item.checked = true;
+        });
+      }
+
+      uni.setStorageSync("CART_DATA", this.goodsData);
+    },
+    del: function del(item) {
+      console.log(item);
+      var index = this.goodsData.findIndex(function (i) {
+        return i.goods_id == item.goods_id;
+      });
+      // console.log(index);
+      this.goodsData.splice(index, 1);
+      uni.setStorageSync("CART_DATA", this.goodsData);
+    },
+    count: function count() {
+      // console.log("count");
+      if (this.totalNum == 0) {
+        uni.showToast({
+          title: "您还未选择任何商品",
+          icon: "none" });
+
+      } else {
+        uni.navigateTo({
+          url: "/pages/payorder/payorder" });
+
+      }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

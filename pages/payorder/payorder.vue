@@ -10,16 +10,11 @@
 -->
 <template>
   <view>
-    <p class="text">购物车</p>
-    <view class="noGoods" v-if="goodsData.length == 0">
-      <p>购物车暂无商品</p>
-    </view>
+    <p class="text">支付</p>
+
     <view class="">
       <ul>
         <li v-for="(item, i) in goodsData" :key="i" class="listGoodsItem">
-          <checkbox-group @change="changeSel(item)">
-            <checkbox :checked="item.checked" />
-          </checkbox-group>
           <view class="">
             <image
               :src="item.goods_big_logo"
@@ -32,25 +27,17 @@
               </p>
               <view class="numberbox">
                 <p class="price">￥{{ item.goods_price }}</p>
-                <uni-number-box
-                  :value="item.num"
-                  @change="changeNum(item, $event)"
-                ></uni-number-box>
               </view>
-              <p class="del" @click="del(item)">删除</p>
+              <p class="del">X {{ item.num }}</p>
             </view>
           </view>
         </li>
       </ul>
 
       <view class="bottomAccount">
-        <checkbox-group @change="changeAllSel">
-          <label v-if="goodsData.length != 0">
-            <checkbox :checked="allChecked" /> 全选
-          </label>
-        </checkbox-group>
+        <checkbox-group> </checkbox-group>
         <view class="right">
-          <view class="count" @click="count"> 结算({{ totalNum }}) </view>
+          <view class="count" @click="count"> 支付({{ totalNum }}) </view>
           <view class="price">
             <p class="priceText">
               合计<span>￥{{ totalPrice }}</span>
@@ -104,6 +91,9 @@ export default {
   },
   onShow() {
     this.goodsData = uni.getStorageSync("CART_DATA");
+    this.goodsData = this.goodsData.filter((item) => {
+      return item.checked == true;
+    });
     console.log(this.goodsData);
   },
   methods: {

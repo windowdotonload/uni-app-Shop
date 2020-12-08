@@ -6,7 +6,8 @@
     "pages/user/user",
     "pages/search/search",
     "pages/goodsdetail/goodsdetail",
-    "pages/goodsdescription/goodsdescription"
+    "pages/goodsdescription/goodsdescription",
+    "pages/payorder/payorder"
   ],
   "subPackages": [],
   "window": {

@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.noGoods.data-v-ca870978 {
+.noGoods.data-v-38e0b146 {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -37,19 +37,19 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
-.noGoods ._p.data-v-ca870978 {
+.noGoods ._p.data-v-38e0b146 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #b7bebe;
 }
-.text.data-v-ca870978 {
+.text.data-v-38e0b146 {
   padding: 5px 10px;
   font-size: 15px;
   color: #dfe4ea;
 }
-.numberbox.data-v-ca870978 {
+.numberbox.data-v-38e0b146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -60,11 +60,11 @@
   -webkit-align-items: center;
           align-items: center;
 }
-._ul.data-v-ca870978 {
+._ul.data-v-38e0b146 {
   padding: 0;
   margin: 0;
 }
-._li.data-v-ca870978 {
+._li.data-v-38e0b146 {
   height: 120px;
   margin: 0;
   padding-top: 10px;
@@ -72,7 +72,7 @@
   border-top: 1px solid #dfeae6;
   list-style: none;
 }
-.listGoodsItem.data-v-ca870978 {
+.listGoodsItem.data-v-38e0b146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -83,12 +83,12 @@
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
-.listGoodsItem image.data-v-ca870978 {
+.listGoodsItem image.data-v-38e0b146 {
   width: 100px;
   height: 100px;
   position: absolute;
 }
-.listGoodsItem .desContent.data-v-ca870978 {
+.listGoodsItem .desContent.data-v-38e0b146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -105,10 +105,10 @@
   padding-left: 110px;
   float: left;
 }
-.listGoodsItem .desContent .price.data-v-ca870978 {
+.listGoodsItem .desContent .price.data-v-38e0b146 {
   color: #d63031;
 }
-.bottomAccount.data-v-ca870978 {
+.bottomAccount.data-v-38e0b146 {
   position: fixed;
   display: -webkit-box;
   display: -webkit-flex;
@@ -126,19 +126,19 @@
   padding-left: 10px;
   bottom: 0px;
 }
-.right.data-v-ca870978 {
+.right.data-v-38e0b146 {
   overflow: hidden;
 }
-.price.data-v-ca870978 {
+.price.data-v-38e0b146 {
   float: right;
   padding-top: 5px;
   padding-right: 10px;
 }
-.price .priceText.data-v-ca870978 {
+.price .priceText.data-v-38e0b146 {
   width: 100px;
   text-align: right;
 }
-.count.data-v-ca870978 {
+.count.data-v-38e0b146 {
   float: right;
   width: 100px;
   height: 50px;
@@ -146,7 +146,7 @@
   text-align: center;
   background: #ec6464;
 }
-.del.data-v-ca870978 {
+.del.data-v-38e0b146 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 5px 5px;

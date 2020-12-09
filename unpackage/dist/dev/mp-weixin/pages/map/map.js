@@ -141,14 +141,24 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
       markpoint: [
       {
-        latitude: '116.403963',
-        longitude: '39.915119',
+        latitude: "116.403963",
+        longitude: "39.915119",
         iconPath: "/static/maker.png" }] };
 
 

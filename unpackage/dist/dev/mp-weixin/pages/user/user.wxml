@@ -1,1 +1,1 @@
-<view><view class="_h1">car</view></view>
+<view class="userContiner data-v-80842834"><view class="topBac data-v-80842834"><image class="bac data-v-80842834" mode="scaleToFill" src="{{userinfo.userInfo.avatarUrl}}"></image><image class="showAvatar data-v-80842834" mode="aspectFit" src="{{userinfo.userInfo.avatarUrl}}"></image></view><view class="Menu data-v-80842834"></view></view>

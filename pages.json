@@ -65,6 +65,14 @@
             }
             
         }
+        ,{
+            "path" : "pages/map/map",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"tabBar":{
 		"selectedColor":"black",

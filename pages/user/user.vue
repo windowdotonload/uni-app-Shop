@@ -70,7 +70,7 @@
         <ul>
           <li>联系客服</li>
           <li>关于我们</li>
-          <li>公司地址</li>
+          <li @click='toMap'>公司地址</li>
         </ul>
       </view>
      </view>
@@ -94,7 +94,13 @@ export default {
       },
     });
   },
-  methods: {},
+  methods: {
+    toMap(){
+      uni.navigateTo({
+         url: '/pages/map/map'
+      });
+    }
+  },
 };
 </script>
 

@@ -7,7 +7,8 @@
     "pages/search/search",
     "pages/goodsdetail/goodsdetail",
     "pages/goodsdescription/goodsdescription",
-    "pages/payorder/payorder"
+    "pages/payorder/payorder",
+    "pages/map/map"
   ],
   "subPackages": [],
   "window": {
